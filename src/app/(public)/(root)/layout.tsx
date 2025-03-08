@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, Suspense } from "react";
 
 import { LayoutProps } from "./types";
 
@@ -6,8 +6,10 @@ export default function Layout({ searchBar, photoGrid, children, searchPhrase }:
   return (
     <Fragment>
       {children}
-      {searchBar}
-      {searchPhrase}
+      <Suspense fallback={null}>
+        {searchBar}
+        {searchPhrase}
+      </Suspense>
       {photoGrid}
     </Fragment>
   );
