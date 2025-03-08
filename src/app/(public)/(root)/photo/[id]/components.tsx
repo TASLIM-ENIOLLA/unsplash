@@ -27,7 +27,7 @@ export function PhotoDisplayCard({ id, urls, user, width, height, description }:
           <ChevronLeft size="30" className="mx-auto" />
         </button>
       </div>
-      <div className="flex-1 max-h-full">
+      <div className="flex-1">
         <div className="flex flex-col justify-center">
           <div className="flex-none">
             <figure className="flex flex-col rounded-lg overflow-hidden bg-foreground">
@@ -38,6 +38,7 @@ export function PhotoDisplayCard({ id, urls, user, width, height, description }:
                     height={height}
                     src={urls.regular}
                     alt={String(description)}
+                    className="max-h-[65vh]"
                   />
                   <div className="top-0 left-0 absolute">
                     <div className="p-5">
