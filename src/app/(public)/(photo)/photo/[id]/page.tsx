@@ -5,7 +5,7 @@ import { getPhoto } from "./actions";
 import { PhotoDisplay } from "./components";
 
 export default async function Page({ params }: PageProps) {
-  const id = await params.id;
+  const id = (await params).id;
   const photo = await getPhoto(id);
 
   if(!photo) {
